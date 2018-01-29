@@ -23,7 +23,6 @@
 
 #include "keypad.h"
 #include "nokia5110.h"
-#include "serial.h"
 
 #define EMPTY 0
 #define SNAKE 1
@@ -273,7 +272,6 @@ void loop_Draw()
 // Nessa função é feita a inicialização do hardware, da seed dos sorteios e do jogo em si.
 void setup() 
 {
-  Serial.begin(115200);
   initializeDisplay(0xC0,0x07,0x014);
   kpInit();
   randomSeed(analogRead(0));
